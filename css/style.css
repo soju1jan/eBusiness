@@ -2372,6 +2372,48 @@ span.email-notes {
   .cert-grid .thumb-wrap{ height:260px; }
 }
 
+/* === Typography Override: 글자 크게 보기 === */
+:root{
+  --font-body: 16px;   /* 14px → 16px */
+  --lh-body: 1.7;
+}
+
+/* 본문 기본 */
+body{
+  font-size: var(--font-body);
+  line-height: var(--lh-body);
+}
+
+/* 제목 계층(비율 유지하며 약간 키움) */
+h1{ font-size: 52px; line-height: 1.2; }
+h2{ font-size: 42px; line-height: 1.25; }
+h3{ font-size: 34px; line-height: 1.3; }
+h4{ font-size: 26px; line-height: 1.35; }
+
+/* 자주 쓰이는 본문 텍스트들 일괄 상향 */
+p, li,
+.single-well p, .single-well ul li,
+.single-services>p,
+.project-menu li a,
+.pst-content p, .pst-content p a,
+.left-blog ul li a,
+.blog-btn, .guest-rev, .comments-content-wrap, .cert-meta,
+.pri_table_list ol li,
+.single-icon p,
+.footer-head p, .popular-tag ul li a,
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea,
+.main-menu ul.navbar-nav li a{
+  font-size: 16px;
+}
+
+/* 모바일에서 지나치게 커지지 않도록 미세 조정 */
+@media (max-width: 767px){
+  :root{ --font-body: 15px; }
+  h1{ font-size: 40px; }
+  h2{ font-size: 32px; }
+  h3{ font-size: 26px; }
+  h4{ font-size: 22px; }
+}
 
 
 /*----------------------------------------
